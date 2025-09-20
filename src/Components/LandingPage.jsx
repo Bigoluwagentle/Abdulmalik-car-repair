@@ -52,8 +52,8 @@ function LandingPage(){
                         whileInView={{y:0, opacity:1}}
                         transition={{duration:1, delay: 1}}
                     >Reliable <motion.span 
-                        initial={{opacity:0, x: 50}}
-                        whileInView={{opacity:1, x:0}}
+                        initial={{opacity:0, y: 50}}
+                        whileInView={{opacity:1, y:0}}
                         transition={{duration:2, delay:1.5}}
                     >Car Repair Services</motion.span> You Can Trust</motion.h1>
                     <motion.p
@@ -62,7 +62,7 @@ function LandingPage(){
                         transition={{duration:1, delay: 1.5}}
                     >We offer affordable and professional auto repair solutions for all car brands.</motion.p>
                     <motion.button onClick={start}
-                        initial={{opacity:0, x:100}}
+                        initial={{opacity:0, x:10}}
                         whileInView={{opacity:1, x:0}}
                         transition={{type: "spring", stiffness: 130, duration:1, delay:2}}
                     >Get Started</motion.button>
@@ -87,8 +87,8 @@ function LandingPage(){
                         transition={{duration:1, delay:0.7}}
                     >We are team of certified auto technicians with over 10 years of experience in car diagnostics abd repairs. We prioritize quality service and costomer satisfaction.</motion.p>
                     <motion.button onClick={start}
-                        initial={{opacity:0, x:100}}
-                        whileInView={{opacity:1, x:0}}
+                        initial={{opacity:0, z:100}}
+                        whileInView={{opacity:1, z:0}}
                         transition={{duration:1, delay:0.8}}
                     >Book an Appointment</motion.button>
                 </section>

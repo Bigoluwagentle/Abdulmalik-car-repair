@@ -290,9 +290,19 @@
     #landing{
         > header{
             padding: 0px 10px;
+            > h4{
+                font-size: 1em;
+                img{
+                    width: 30px;
+                }
+                
+            }
             > div{
                 display: none;
 
+            }
+            > button{
+                min-width: 120px;
             }
         }
         #container{

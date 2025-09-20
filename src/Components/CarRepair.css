@@ -108,3 +108,27 @@
         }
     }
 }
+@media screen and (max-width: 800px){
+    #repairs{
+        > header{
+            padding: 0px 10px;
+            > h4{
+                font-size: 1em;
+                > img{
+                    width: 30px;
+                }
+            }
+        }
+        #carRepair{
+            > nav{
+                flex-direction: column;
+                > input{
+                    width: 95%;
+                }
+                > button{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

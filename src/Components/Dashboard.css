@@ -143,6 +143,7 @@
         > header{
             padding: 0px 10px;
             > h4{
+                font-size: 1em;
                 > img{
                     width: 30px;
                 }
