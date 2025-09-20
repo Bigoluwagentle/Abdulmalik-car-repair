@@ -1,6 +1,7 @@
 import "./CarRepair.css";
 import React, { useState } from "react";
 import Logo from "./Assets/image 783.svg";
+const userName = window.sessionStorage.getItem("user");
 
 function CarRepair() {
   const [query, setQuery] = useState("");
@@ -63,7 +64,7 @@ If the problem continues, it is recommended to consult a professional mechanic f
         <div>
             <h4>
                 <i class="fa-solid fa-user"></i>
-                    Hi, ABDULMALIK
+                    Hi, {userName}
             </h4>
             <nav>
                 <p><i class="fa-solid fa-user"></i> Profile</p>

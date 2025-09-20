@@ -6,15 +6,8 @@ import Car from "./Assets/car.svg";
 import Car1 from "./Assets/car (1).svg";
 import Car2 from "./Assets/car (2).svg";
 const userName = window.sessionStorage.getItem("user");
-const username = userName.split(" ")[0];
 
 function Dashboard(){
-    function GoBAck(){
-        if(!userName){
-            document.querySelector("#lands").click();
-        }
-    }
-    GoBAck();
     return(
         <div id="dashboard">
             <header>
@@ -29,7 +22,7 @@ function Dashboard(){
                 <div>
                     <h4>
                         <i class="fa-solid fa-user"></i>
-                         Hi, {username}
+                         Hi, {userName}
                     </h4>
                     <nav>
                         <p><i class="fa-solid fa-user"></i> Profile</p>

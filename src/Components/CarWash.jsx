@@ -1,6 +1,7 @@
 import "./CarWash.css";
 import React, { useState } from "react";
 import Logo from "./Assets/image 783.svg";
+const userName = window.sessionStorage.getItem("user");
 function NearbyCarWash() {
   const [location, setLocation] = useState(null);
   const [carWashes, setCarWashes] = useState([]);
@@ -88,7 +89,7 @@ function NearbyCarWash() {
             <div>
                 <h4>
                     <i class="fa-solid fa-user"></i>
-                        Hi, ABDULMALIK
+                        Hi, {userName}
                 </h4>
                 <nav>
                     <p><i class="fa-solid fa-user"></i> Profile</p>

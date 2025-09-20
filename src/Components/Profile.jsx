@@ -33,8 +33,8 @@ function Profile(){
                 <img src={Group} alt="" />
                 <form onSubmit={(e) => e.preventDefault()}>
                     <nav>
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" placeholder="Full Name" />
+                        <label htmlFor="name">Username</label>
+                        <input type="text" id="name" placeholder="Username" />
                     </nav>
                     <nav>
                         <label htmlFor="name">Date of Birth</label>
