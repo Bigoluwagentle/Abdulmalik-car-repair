@@ -2,11 +2,21 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import Location from "./Assets/Frame 1618878162 (1).svg";
 import Group from "./Assets/Group.svg";
+
 function Profile(){
     function continues(){
         document.querySelector("#location").style.display = "none";
         document.querySelector("#Profiles").style.display = "flex";
 
+    }
+    function conti(){
+        const use = document.querySelector("#name").value;
+        if(document.querySelector("#name").value.length > 0 && document.querySelector("#motto").value.length > 0){
+            document.querySelector("#dash").click();
+            window.sessionStorage.setItem("user", use);
+        }else{
+            alert("Enter your info");
+        }
     }
     return(
         <div id="profile">
@@ -35,9 +45,7 @@ function Profile(){
                         <input type="text" id="motto" placeholder="Brand of Your Motto" />
                     </nav>
                     <nav>
-                        <button onClick={() => {
-                            document.querySelector("#dash").click();
-                        }}>Continue</button>
+                        <button onClick={conti}>Continue</button>
                     </nav>
                 </form>
             </div>

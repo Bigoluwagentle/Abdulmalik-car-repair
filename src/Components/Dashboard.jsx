@@ -5,8 +5,16 @@ import Logo from "./Assets/image 783.svg";
 import Car from "./Assets/car.svg";
 import Car1 from "./Assets/car (1).svg";
 import Car2 from "./Assets/car (2).svg";
+const userName = window.sessionStorage.getItem("user");
+const username = userName.split(" ")[0];
 
 function Dashboard(){
+    function GoBAck(){
+        if(!userName){
+            document.querySelector("#lands").click();
+        }
+    }
+    GoBAck();
     return(
         <div id="dashboard">
             <header>
@@ -21,11 +29,16 @@ function Dashboard(){
                 <div>
                     <h4>
                         <i class="fa-solid fa-user"></i>
-                         Hi, ABDULMALIK
+                         Hi, {username}
                     </h4>
                     <nav>
                         <p><i class="fa-solid fa-user"></i> Profile</p>
-                        <p><i class="fa-solid fa-right-from-bracket"></i>
+                        <p onClick={() => {
+                            const confirms = window.confirm("Are you sure you want to logout");
+                            if(confirms){
+                                document.querySelector("#lands").click();
+                            }
+                        }}><i class="fa-solid fa-right-from-bracket"></i>
                         Logout</p>
                     </nav>
                 </div>
@@ -37,7 +50,9 @@ function Dashboard(){
                 <h1>40%</h1>
                 <p>leverage on this and start work</p>
 
-                <button>Get</button>
+                <button onClick={() => {
+                    document.querySelector("#repair").click();
+                }}>Get</button>
             </div>
 
             <h1>AT YOUR SERVICE</h1>
@@ -86,6 +101,7 @@ function Dashboard(){
             </div>
             <Link to="/Repair" id="repair"/>
             <Link to="/Car-wash" id="washed"/>
+            <Link to="/" id="lands"/>
         </div>
     )
 }
